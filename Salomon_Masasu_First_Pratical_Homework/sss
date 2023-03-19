@@ -1,0 +1,15 @@
+<?php if($result->num_rows>0) {
+        while($row=$result->fetch_assoc()) {
+            ?><tr>
+    <td style="border: 1px solid black;"><?php echo $row['FurnitureId'];
+            ?></td>
+    <td style="border: 1px solid black;"><?php echo $row['FurnitureName'];
+            ?></td>
+    <td style="border: 1px solid black;"><?php echo $row['FurnitureOwnerName'];
+            ?></td>
+    <td><a href="update.php?furnitureid='echo $row['FurnitureId']'"> Edit</td>
+</tr><?php
+        }
+    }
+
+    ?>
